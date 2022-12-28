@@ -1,1 +1,20 @@
 https://github.com/Altu-Bitu/Notice/blob/main/%EA%B0%95%EC%9D%98%20%EC%9E%90%EB%A3%8C/01.%20%EC%A0%95%EB%A0%AC.pdf
+
+
+01. Insertion Sort (삽입정렬)
+  기존에 정렬되어 있는 리스트에 새로운 원소의 위치를 찾아 정렬하는 방법이다.
+
+-알고리즘이 굉장히 간단하므로 오버헤드가 적다. 적은 레코드의 경우 오히려 빠를수도 있다.
+-알고리즘이 안정성(stable)을 만족한다. <- https://wisdom-and-record.tistory.com/57
+-이미 대부분의 레코드가 정렬되었는데, 몇개의 변동이 있는 경우 빠르다.
+-당연하지만 시간복잡도가 좋은 것은 아니라 레코드가 많아질수록 기하급수적으로 느려진다.
+- Best : O(n), Average : O(n^2), Worst : O(n^2)
+
+02. Selection Sort (선택정렬)
+  정렬되지 않은 리스트에서 최솟값(최댓값)을 찾아 가장 앞으로 순서대로 값을 빼서 바꿔주는 방법이다.
+  
+-자료이동의 횟수를 예측할 수 있다.
+-알고리즘이 불안정(unstable)하다. 또한 굉장히 느리다.
+- Best : O(n^2), Average : O(n^2), Worst : O(n^2)
+
+03. Bubble Sort (버블)
