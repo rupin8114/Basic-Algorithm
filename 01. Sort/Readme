@@ -17,4 +17,10 @@ https://github.com/Altu-Bitu/Notice/blob/main/%EA%B0%95%EC%9D%98%20%EC%9E%90%EB%
 -알고리즘이 불안정(unstable)하다. 또한 굉장히 느리다.
 - Best : O(n^2), Average : O(n^2), Worst : O(n^2)
 
-03. Bubble Sort (버블)
+03. Bubble Sort (버블정렬)
+  가장 앞의 자료부터 인접한 뒤의 자료와 비교하여 큰 값을 뒤로 넘기는 것이다. 이때, 뒤쪽 수부터 정렬된다.
+  
+-알고리즘이 안정하다.
+-선택정렬보다도 더 느린 정렬이며 그 이유는 자료를 특정위치로 이동시켜서 저장하는 것이 아닌
+ 다음 자료와 교환해야하기 때문이다.
+- Best : O(n^2), Average : O(n^2), Worst : O(n^2)
