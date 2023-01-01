@@ -14,13 +14,15 @@ int main() {
     scanf("%d", &arr[i]);
   }
 
-  //삽입정렬
+  //버블정렬
   bubble_sort(arr, length);
 
   //출력
   for (int i = 0; i < length; i++) {
     printf("%d ", arr[i]);
   }
+  
+  free(arr);
 
   return 0;
 }
