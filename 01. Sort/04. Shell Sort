@@ -1,7 +1,7 @@
 #include <iostream>
 
 void shell_sort(int *arr, int n);
-void insertion_sort(int *arr, int i, int n, int gap);
+void insertion_sort(int *arr, int first, int last, int gap);
 
 int main() {
   int length;
@@ -33,31 +33,29 @@ i번 반복할때마다 가장 큰 원소가 가장 오른쪽에 오는 것은 �
 */
 void shell_sort(int *arr, int n) {
   int gap = n;
+  int i;
   printf("실행");
   while (gap > 1) {
     gap = gap / 2;
-    if (gap % 2 == 0)
-      gap++;
-    for (int i = 0; i < gap; i++) {
+    if ((gap % 2) == 0)
+      gap = gap + 1;
+    for (i = 0; i < gap; i++) {
       printf("실행");
       insertion_sort(arr, i, n, gap);
     }
   }
 }
 
-void insertion_sort(int *arr, int i, int n, int gap) {
-  int key;
+void insertion_sort(int list[], int first, int last, int gap){
+  int i, j, key;
 
-  for (int j = i + gap; i < n; j = j + gap) {
-    key = arr[i];
-
-    for (int k = j - gap; k >= i; k = k - gap) {
-      if (arr[k] > key)
-        arr[k + gap] = arr[k];
-      else {
-        arr[k + gap] = key;
-        break;
-      }
+  for(i=first+gap; i<last; i=i+gap){
+    key = list[i];
+    
+    for(j=i-gap; j>=first && list[j]>key; j=j-gap){
+      list[j+gap] = list[j];
     }
+
+    list[j+gap] = key;
   }
 }
