@@ -32,3 +32,5 @@ https://github.com/Altu-Bitu/Notice/blob/main/%EA%B0%95%EC%9D%98%20%EC%9E%90%EB%
  앞쪽에 삽입되어 뒤로 쭉 밀리는 상황이 일어나지 않는다. 즉, 자료의 정렬된 위치와 가까운 곳으로 이동될 확률이 높다.
 -gap이 홀수일 때 효율이 더 좋다고 한다.
 - Best : O(n), Average : O(n^1.5), Worst : O(n^2)
+
+05. Merge Sort (병합정렬)
