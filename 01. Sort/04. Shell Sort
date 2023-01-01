@@ -27,20 +27,17 @@ int main() {
   return 0;
 }
 /*
-i번 반복할때마다 가장 큰 원소가 가장 오른쪽에 오는 것은 확실하기에 반복할 때
-제외하고 정렬한다. "여기"의 부등호를 바꿈으로써 오름차순 정렬이 아니라 내림차순
-정렬이 가능하다.
+부분리스트를 띄엄띄엄 만들어서 자료가 삽입될 때 비교적 자신의 정렬된 위치와 비슷한 곳에 미리 정렬되어 있게 한다.
+gap을 점점 줄여서 어느 순간 1이 되어 삽입정렬과 같게 하되, gap이 홀수일 때 성능이 더 좋다고 한다.
 */
 void shell_sort(int *arr, int n) {
   int gap = n;
   int i;
-  printf("실행");
   while (gap > 1) {
     gap = gap / 2;
     if ((gap % 2) == 0)
       gap = gap + 1;
     for (i = 0; i < gap; i++) {
-      printf("실행");
       insertion_sort(arr, i, n, gap);
     }
   }
